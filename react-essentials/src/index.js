@@ -4,7 +4,10 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  React.createElement("h1", { style: { color: "violet" } }, "Hola Chica Bofos🤪"),
+  React.createElement("ul", null,
+    React.createElement("li", { style: { color: "blue" } }, "Hola Chica Bofos🤪"),
+    React.createElement("li", { style: { color: "green" } }, "Hola Chica Nofos🤪"),
+    React.createElement("li", { style: { color: "red" } }, "Hola Chica Kofos🤪")),
   document.getElementById('root')
 );
 
