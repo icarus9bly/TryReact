@@ -1,14 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 
-function Header(){
+function Header(props){
   return(
-    <header>Awesome header yo 🔥</header>
+    <header>Awesome header yo {props.className}🔥</header>
   )
 }
-function Section(){
+function Section(props){
   return(
-    <section>This in my Awesome main Area 🥸</section>
+    <section>This in my Awesome main Area is for doing {props.content} 🥸</section>
   )
 }
 function Footer(){
@@ -19,8 +19,8 @@ function Footer(){
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Section />
+      <Header className="Adi"/>
+      <Section content="Some bla bla"/>
       <Footer />
     </div>
   );
