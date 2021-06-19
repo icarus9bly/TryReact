@@ -6,12 +6,22 @@ function Header(){
     <header>Awesome header yo 🔥</header>
   )
 }
+function Section(){
+  return(
+    <section>This in my Awesome main Area 🥸</section>
+  )
+}
+function Footer(){
+  return(
+    <footer>Footer stuff 🥸🤣</footer>
+  )
+}
 function App() {
   return (
     <div className="App">
-      <h1>Header</h1>
-      <h2>Section</h2>
-      <h3>Footer</h3>
+      <Header />
+      <Section />
+      <Footer />
     </div>
   );
 }
