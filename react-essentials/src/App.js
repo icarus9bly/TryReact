@@ -19,8 +19,8 @@ function Footer(){
 function App() {
   return (
     <div className="App">
-      <Header className="Adi"/>
-      <Section content="Some bla bla"/>
+      <Header className="Nikhil"/>
+      <Section content="Some bla bla bla"/>
       <Footer />
     </div>
   );
