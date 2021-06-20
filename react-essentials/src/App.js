@@ -1,37 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
-function Header(props){
-  return(
-    <header>Awesome header yo {props.className}🔥</header>
-  )
+function Header(props) {
+  return <header>Awesome header yo {props.className}🔥</header>;
 }
 function Section(props) {
   return (
     <section>
       <p>This in my Awesome main Area is for doing {props.content} 🥸</p>
       <img src="https://github.com/icarus9bly.png" height={400}></img>
-        <ul style={{ textAlign: 'left'}}>
-          {props.dishes.map((dish) => <li key={dish.id}>{dish.title}</li>)}
-        </ul>
+      <ul style={{ textAlign: "left" }}>
+        {props.dishes.map((dish) => (
+          <li key={dish.id}>{dish.title}</li>
+        ))}
+      </ul>
     </section>
-  )
+  );
 }
-function Footer(){
-  return(
-    <footer>Footer stuff 🥸🤣</footer>
-  )
+function Footer() {
+  return <footer>Footer stuff 🥸🤣</footer>;
 }
-const dishes=["Atta Maggi", "Green Maggie", "Gazab Noodles"]
-const dishObject= dishes.map((dish, i) => {
-  return {"id":i, "title":dish}
-})
-console.log(dishObject)
+const dishes = ["Atta Maggi", "Green Maggie", "Gazab Noodles"];
+const dishObject = dishes.map((dish, i) => {
+  return { id: i, title: dish };
+});
+console.log(dishObject);
 function App() {
   return (
     <div className="App">
-      <Header className="Nikhil"/>
-      <Section content="Some bla bla bla" dishes={dishObject}/>
+      <Header className="Nikhil" />
+      <Section content="Some bla bla bla" dishes={dishObject} />
       <Footer />
     </div>
   );
