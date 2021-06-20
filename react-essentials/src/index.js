@@ -4,14 +4,22 @@ import './index.css';
 import App from "./App.js"
 import reportWebVitals from './reportWebVitals';
 
+function NextCompi(){
+  return <h1>Kuch naya karte haen</h1>
+}
 function App2(){
-  return <h1>This is my second App Bufkins</h1>
+  return (
+    <>
+  <h1>This is my second App Bufkins</h1>
+    <NextCompi />
+    </>
+    )
 }
 ReactDOM.render(
   <>
-<App />
-<App2 />
-</>
+    <App />
+    <App2 authorized={false}/>
+  </>
   ,
   document.getElementById('root')
 );
