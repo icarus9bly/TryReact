@@ -7,13 +7,13 @@ import reportWebVitals from './reportWebVitals';
 function NextCompi(){
   return <h1>Kuch naya karte haen</h1>
 }
-function App2(){
-  return (
-    <>
-  <h1>This is my second App Bufkins</h1>
-    <NextCompi />
-    </>
-    )
+function App2(props) {
+      if (props.authorized){
+        return <h1>This is my second App Bufkins</h1>
+      }
+      else{
+        return <NextCompi />
+      }
 }
 ReactDOM.render(
   <>
