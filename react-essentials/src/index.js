@@ -4,8 +4,14 @@ import './index.css';
 import App from "./App.js"
 import reportWebVitals from './reportWebVitals';
 
+function App2(){
+  return <h1>This is my second App Bufkins</h1>
+}
 ReactDOM.render(
+  <React.Fragment>
 <App />
+<App2 />
+</React.Fragment>
   ,
   document.getElementById('root')
 );
