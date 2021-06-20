@@ -10,7 +10,7 @@ function Section(props) {
   return (
     <section>This in my Awesome main Area is for doing {props.content} 🥸
       <p>
-        <ul>
+        <ul style={{ textAlign: 'left'}}>
           {props.dishes.map((dish) => <li>{dish}</li>)}
         </ul>
       </p>
