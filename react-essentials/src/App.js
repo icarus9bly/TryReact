@@ -8,7 +8,9 @@ function Header(props){
 }
 function Section(props) {
   return (
-    <section>This in my Awesome main Area is for doing {props.content} 🥸
+    <section>
+      <p>This in my Awesome main Area is for doing {props.content} 🥸</p>
+      <img src="https://github.com/icarus9bly.png" height={400}></img>
         <ul style={{ textAlign: 'left'}}>
           {props.dishes.map((dish) => <li key={dish.id}>{dish.title}</li>)}
         </ul>
