@@ -7,17 +7,15 @@ import reportWebVitals from "./reportWebVitals";
 function NextCompi() {
   return <h1>Kuch naya karte haen</h1>;
 }
-function App2(props) {
-  if (props.authorized) {
-    return <h1>This is my second App Bufkins</h1>;
-  } else {
-    return <NextCompi />;
-  }
+function App2({ authorized }) {
+  return (
+    <>{authorized ? <h1>This is my second App Bufkins</h1> : <NextCompi />}</>
+  );
 }
 ReactDOM.render(
   <>
     <App />
-    <App2 authorized={false} />
+    <App2 authorized={true} />
   </>,
   document.getElementById("root")
 );
