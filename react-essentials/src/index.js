@@ -14,6 +14,7 @@ function NextCompi() {
   }
   const [emotion, setEmotion] = useState("happy");
   const [secondary, setSecondary] = useState("tired");
+  const [data, setData] = useState(null);
   useEffect(() => {
     {
       console.log(`It's my current ${emotion} emotion`);
@@ -22,6 +23,11 @@ function NextCompi() {
   useEffect(() => {
     console.log(`It's my secondary ${secondary} emotion`);
   }, [secondary]);
+  useEffect(() => {
+    fetch("https://api.github.com/users")
+      .then((res) => res.json())
+      .then(setData);
+  });
   return (
     <>
       <h1>
@@ -34,6 +40,10 @@ function NextCompi() {
         Bhot Happy🤪
       </button>
       <button onClick={() => setSecondary("Ultra Happy")}>Ultra Happy😭</button>
+      <div>
+        <h1>My Github user list</h1>
+        {JSON.stringify(data)}
+      </div>
     </>
   );
 }
